@@ -16,8 +16,7 @@ public class StringUtilsTest {
 	
 	@Test
 	public void aaaを入力するとaaaが取得できる() throws Exception {
-		StringUtils sut = new StringUtils();
-		assertThat(sut.toSnakeCase("aaa"), is("aaa"));
+		assertThat(StringUtils.toSnakeCase("aaa"), is("aaa"));
 	}
 	
 }
