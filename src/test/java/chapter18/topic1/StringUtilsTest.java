@@ -19,4 +19,9 @@ public class StringUtilsTest {
 		assertThat(StringUtils.toSnakeCase("aaa"), is("aaa"));
 	}
 	
+	@Test
+	public void HelloWorldを入力するとhello_worldが取得できる() throws Exception {
+		assertThat(StringUtils.toSnakeCase("HelloWorld"), is("hello_world"));
+	}
+	
 }
