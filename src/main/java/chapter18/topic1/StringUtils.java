@@ -14,7 +14,15 @@ public class StringUtils {
 	 * @return
 	 */
 	public static String toSnakeCase(String string) {
-		return string.replaceAll("([A-Z]+)([A-Z][a-z])", "$1_$2").replaceAll("([a-z])([A-Z])", "$1_$2").toLowerCase();
+		StringBuffer sb = new StringBuffer();
+		String[] stringArray = string.split("(?=[A-Z])");
+		for (String str : stringArray) {
+			if (!sb.toString().isEmpty()) {
+				sb.append("_");
+			}
+			sb.append(str.toLowerCase());
+		}
+		return sb.toString();
 	}
 	
 }
