@@ -14,7 +14,7 @@ public class StringUtils {
 	 * @return
 	 */
 	public static String toSnakeCase(String string) {
-		return "aaa";
+		return string;
 	}
 	
 }
