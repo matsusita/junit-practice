@@ -14,6 +14,9 @@ public class StringUtils {
 	 * @return
 	 */
 	public static String toSnakeCase(String string) {
+		if (string == null) {
+			throw new NullPointerException("text == null.");
+		}
 		StringBuffer sb = new StringBuffer();
 		String[] stringArray = string.split("(?=[A-Z])");
 		for (String str : stringArray) {
